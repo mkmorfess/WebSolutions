@@ -9,7 +9,6 @@
 <body>
 
 	<div class="container-fluid">
-		<header>
 			<nav>
 				<a href="">HOME</a>
 				<a href="">ABOUT</a>
@@ -25,10 +24,11 @@
 	  			<img width="40" height="40" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSLQodC70L7QuV8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNC4yODUsMTEuMjg0TDE2LDE5LjU3MWwtOC4yODUtOC4yODhjLTAuMzk1LTAuMzk1LTEuMDM0LTAuMzk1LTEuNDI5LDAgIGMtMC4zOTQsMC4zOTUtMC4zOTQsMS4wMzUsMCwxLjQzbDguOTk5LDkuMDAybDAsMGwwLDBjMC4zOTQsMC4zOTUsMS4wMzQsMC4zOTUsMS40MjgsMGw4Ljk5OS05LjAwMiAgYzAuMzk0LTAuMzk1LDAuMzk0LTEuMDM2LDAtMS40MzFDMjUuMzE5LDEwLjg4OSwyNC42NzksMTAuODg5LDI0LjI4NSwxMS4yODR6IiBmaWxsPSIjMTIxMzEzIiBpZD0iRXhwYW5kX01vcmUiLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48L3N2Zz4=" />
 			</div> -->
 
-		</header>
 	</div>
+
+
 	<div class="row">
-		<div class="container about">
+		<div class="container about about-back">
 				<div class="col-md-12">
 					<h2><inline>ABOUT MYSELF</inline></h2>
 					<div class="pictures">
@@ -69,11 +69,12 @@
 
 
 		</div> <!--End of Wrapper -->
+		</div>
 	</div>
 
 
 	<div class="row">
-		<div class="container port">
+		<div class="container port port-back">
 				<div class="col-md-12">
 					<h2><inline>PORTFOLIO</inline></h2>
 					<div class="pictures">
@@ -178,25 +179,29 @@
 
 	body {
 		background-color: rgba(0,0,0,0.1);
-		margin: 0;
 	}
 
 	.container-fluid {
 	background-image: url("bridge1.jpeg");
-	background-size: 100%;
+	background-size: cover;
+	background-position: fixed;
 	background-repeat: no-repeat;
-	height: 700px;
-	width: 100%;
+	padding-bottom: 25%;
+
+	width: 102.5%;
 	font-family: 'Fira Sans', sans-serif;
 	border-bottom: 1px black solid;
+	box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.7);
 	}
 
+	
 	.about {
-		background-image: url("ink4.jpeg");
-		background-size: 130%;
+		background-image: url("ink5.jpeg");
+		background-size: 115%;
 	background-repeat: no-repeat;
 	box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.7);
 	}
+
 
 	.port {
 		background-image: url("ink1.jpg");
@@ -218,6 +223,10 @@
 		font-family: 'Fira Sans', sans-serif;
 		border-bottom: 1px black solid;
 	}*/
+
+	h2 {
+		text-align: center;
+	}
 
 	span {
 		padding: 15px;
@@ -290,16 +299,60 @@
 			margin-top: 2%;
 		}
 
+
+
+	@media only screen and (max-width: 1250px) {
+		.about-back {
+			background-color: white;
+		}
+
+		.port {
+			background-size: 140%;
+		}
+	}
+
 	@media only screen and (max-width: 995px) {
 		
 		.small-cont {
 			display: block;
 		}
+		.about-back {
+			background-color: white;
+		}
+		.about {
+			background-color: white;
+			background-image: none;
+		}
+
+		.port-back {
+			background-color: white;
+		}
+		.port {
+			background-color: white;
+			background-image: none;
+		}
 
 	}
 
 
+	@media only screen and (max-width: 785px) {
+		.port {
+			background-color: white;
+			background-image: none;
+		}
+
+		.container {
+			margin: 5%;
+			margin-left: 40px;
+		}
+	}
+
+
 	@media only screen and (max-width: 620px) {
+
+	.port {
+		background-size: 220%;
+	}
 	nav {
 		margin-right: 10px;
 		text-align: center;
