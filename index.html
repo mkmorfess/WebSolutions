@@ -534,14 +534,15 @@ function animateDiv() {
 
 	function slideDiv() {
 
-		var x = $("#dev").offset()
-		alert(x.top)
+		$(".para-header").slideUp(3000, function(){
+			$("#dev").text("CREATIVE");
+			$("#full").text("WEB")
+			$("#porg").text("SOLUTIONS")
+			$(".para-header").slideDown(2000)
+	})
 
-		// $("#dev").animate({height: "250px"},3000).offset().animate({height: originHeight},2000)
-		// console.log("This works")
+
 	}
-
-
 }
 
 function intervalDiv() {
@@ -558,7 +559,7 @@ function intervalDiv() {
 	
 	$("#full").fadeOut(3000).fadeIn(2000);
 	
-	$("#prog").fadeOut(4000).fadeIn(1000);
+	$("#porg").fadeOut(4000).fadeIn(1000);
 	
 	
 	}
