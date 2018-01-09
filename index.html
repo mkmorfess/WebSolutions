@@ -28,12 +28,13 @@
 					<div class="col-md-12">
 						<h1><span>WEB SOLUTIONS</span></h1>
 
-						<p class="para-header"><inline id="dev">DEVELOPER</inline> | <inline id="full">FULL-STACK</inline> | <inline id="prog">PROGRAMMER</inline></p>
+						<div class="para-header"><inline id="dev">DEVELOPER</inline><inline id="full">FULL-STACK</inline><inline id="prog">PROGRAMMER</inline></div>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		
 
 
 		<div id="about-section">
@@ -51,14 +52,14 @@
 						
 						
 						<div class="pictures col-md-12">
-							<img class="centerpic" src="mike.jpg" width="150" height="150" alt="">
+							<img class="centerpic image" src="mike.jpg" width="150" height="150" alt="">
 						</div>
 						<div class="pictures">
-							<img class="pic" src="html.png" width="100" height="100" alt="">
-							<img class="pic" src="css3.png" width="70" height="100" alt="">
+							<img class="pic image" src="html.png" width="100" height="100" alt="">
+							<img class="pic image" src="css3.png" width="70" height="100" alt="">
 							<inline class="small-cont">
-								<img class="pic" src="node.png" width="140" height="100" alt="">
-								<img class="js pic" src="js.png" width="100" height="100" alt="">
+								<img class="pic image" src="node.png" width="140" height="100" alt="">
+								<img class="js pic image" src="js.png" width="100" height="100" alt="">
 							</inline>
 						</div>
 					</div>
@@ -87,6 +88,9 @@
 			</div> 
 		</div>
 
+		<div class="container-fluid border" id="port-scroll">
+		</div>
+
 	<div id="port-section">
 		<h2><inline>PORTFOLIO</inline></h2>
 		<div class="container container-sec port">
@@ -102,6 +106,8 @@
 		</div>
 	</div>
 
+	<div class="container-fluid border" id="contact-scroll">
+	</div>
 
 	<div id="contact-section">
 		
@@ -216,6 +222,11 @@
 
 	}
 
+	.border {
+		margin-top: 5%;
+		border-bottom: 20px black solid;
+	}
+
 	
 	.about {
 	background-color: white;
@@ -254,6 +265,31 @@
 	box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.7);
 	}
 
+	#dev {
+		padding-right: 10%;
+	}
+
+	#full {
+		padding-right: 10%;
+	}
+
+	#prog {
+		padding-right: 10%;
+	}
+
+	#dev:hover {
+		color: rgba(169, 169, 169, 1);
+
+	}
+
+	#full:hover {
+		color: rgba(169, 169, 169, 1);
+	}
+
+	#prog:hover {
+		color: rgba(169, 169, 169, 1);
+	}
+
 	/*header {
 		height: 15%;
 		width: 100%;
@@ -284,7 +320,7 @@
 	h1 {
 		clear:both;
 		text-align: center;
-		margin-top: 10%;
+		margin-top: 7%;
 		padding-top: 10%;
 		font-size: 96px;
 		text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
@@ -296,8 +332,8 @@
 		text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 		font-size: 36px;
 		padding-top: 20px;
+		margin-left: 9%;
 		margin-top: 10%;
-
 		background-color: white;
 
 	}
@@ -339,6 +375,15 @@
 			border-radius: 96px;
 			border: 2px rgba(0,0,0,1) solid;
 			box-shadow: 10px 10px 10px rgba(0,0,0,0.7);
+
+		}
+
+		.image:hover {
+			-webkit-transform:scale(1.25); /* Safari and Chrome */
+		    -moz-transform:scale(1.25); /* Firefox */
+		    -ms-transform:scale(1.25); /* IE 9 */
+		    -o-transform:scale(1.25); /* Opera */
+		     transform:scale(1.25);
 		}
 
 		.row {
@@ -461,13 +506,13 @@
 
 	$("#port").click(function() {
     $('html,body').animate({
-        scrollTop: $("#port-section").offset().top},
+        scrollTop: $("#port-scroll").offset().top},
         2000);
 });
 
 	$("#contact").click(function() {
     $('html,body').animate({
-        scrollTop: $("#contact-section").offset().top},
+        scrollTop: $("#contact-scroll").offset().top},
         2000);
 });
 
@@ -478,22 +523,111 @@
     });
 
 
-    setInterval(fade_outDev, 500);
-    setInterval(fade_outFull, 500);
-    setInterval(fade_outProg, 500);
+var fading = false;
+var timedFade;
 
-	function fade_outDev() {
-	  $("#dev").fadeToggle(1200, "linear");
+
+function animateDiv() {
+
+	slideDiv();
+	timedFade = setInterval(slideDiv, 5000);
+
+	function slideDiv() {
+
+		var x = $("#dev").offset()
+		alert(x.top)
+
+		// $("#dev").animate({height: "250px"},3000).offset().animate({height: originHeight},2000)
+		// console.log("This works")
 	}
 
-	function fade_outFull() {
-	  $("#full").fadeToggle(1300, "linear");
-	}
 
-	function fade_outProg() {
-	  $("#prog").fadeToggle(1400, "linear");
+}
+
+function intervalDiv() {
+
+	fadeDiv();
+
+	timedFade = setInterval(fadeDiv, 5000);
+	
+
+	function fadeDiv() {
+
+
+	$("#dev").fadeOut(2000).fadeIn(3000);
+	
+	$("#full").fadeOut(3000).fadeIn(2000);
+	
+	$("#prog").fadeOut(4000).fadeIn(1000);
+	
+	
 	}
-  
+}
+
+
+function stopAnimate() {
+
+	$("#dev").finish();
+	$("#full").finish();
+	$("#prog").finish();
+
+
+}
+
+	$("#dev").on("click", function(){
+
+		if (fading === false) {
+
+			fading = true;
+			intervalDiv();
+			
+			console.log(fading);
+			
+		}
+
+		else if (fading === true) {
+
+			fading = false;
+			clearInterval(timedFade);
+			
+			stopAnimate();
+			console.log(fading);
+
+		}
+
+		else {
+			console.log("Error");
+		}	
+
+	});
+
+
+	$("#full").on("click", function(){
+
+		if (fading === false) {
+
+			fading = true;
+			animateDiv();
+			console.log(fading);
+			
+		}
+
+		else if (fading === true) {
+
+			fading = false;
+			clearInterval(timedFade);
+			stopAnimate();
+			
+			console.log(fading);
+
+		}
+
+		else {
+			console.log("Error");
+		}	
+
+	});
+	
 </script>
 
 </body>
