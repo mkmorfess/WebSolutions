@@ -14,21 +14,28 @@
 	<body>
 		<div id="home-section">
 			<div class="container-fluid home">
-				<div class="row">
-					<div class="col-md-12">
-						<nav>
-							<a><inline id="about">ABOUT</inline></a>
-							<a><inline id="port">PORTFOLIO</inline></a>
-							<a><inline id="contact">CONTACT</inline></a>
-						</nav>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<nav>
+								<a><inline id="about">.ABOUT</inline></a>
+								<a><inline id="port">.PORTFOLIO</inline></a>
+								<a><inline id="contact">.CONTACT</inline></a>
+							</nav>
 					</div>
 				</div>
-
+			</div>
+			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1><span>WEB SOLUTIONS</span></h1>
-
-						<div class="para-header"><inline id="dev">DEVELOPER</inline><inline id="full">FULL-STACK</inline><inline id="prog">PROGRAMMER</inline></div>
+						<h1><span class="title">{WEB: PORTFOLIO}</span></h1>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="para-header"><inline id="dev">//DEVELOPER</inline><inline id="full">//FULL-STACK</inline><inline id="prog">//PROGRAMMER</inline></div>
 					</div>
 				</div>
 			</div>
@@ -202,27 +209,26 @@
 <style>
 
 	body {
-		background-image: url("bridge1.jpeg");
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		
 		background-size: cover;
-		background-color: rgba(0,0,0,0.1);
+		background-attachment: fixed;
+		
+		background-image: url("bridge1.jpeg");
+		/*background-color: rgba(0,0,0,0.1);*/
 		font-family: 'Fira Sans', sans-serif;
 	}
 
 	.container-sec {
 		margin-top: 5%;
 		padding-bottom: 3%;
+		width: 90%;
+		background-color: white;
 	}
 
 	.home {
-	background-color: rgba(0,0,0,0.1);
-	background-size: 100%;
-	background-repeat: no-repeat;
-	border-bottom: 20px black solid;
-	padding-bottom: 25%;
-
+		background-color: rgba(0,0,0,0.1);
+		background-size: 100%;
+		border-bottom: 20px black solid;
+		padding-bottom: 25%;
 	}
 
 	.border {
@@ -231,88 +237,34 @@
 	}
 
 	
-	.about {
-	background-color: white;
-	background-repeat: no-repeat;
-	box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.7);
-	
-	}
-
-	#home-section {
-
+	.about, .port, .contact {
+		box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.7);
 	}
 
 	#about, #contact, #port{
 		border: 2px solid black;
 		padding: .5%;
+		margin-left: 3%;
+		margin-right: 3%;
 	}
 
-	#about-section {
+	#about-section, #port-section, #contact-section {
 		margin-top: 10%;
 	}
 
-	#port-section {
-		margin-top: 10%;
-	}
+	
 
-	#contact-section {
-		margin-top: 10%;
-	}
-
-
-	.port {
-	background-color: white;
-	background-repeat: no-repeat;
-	box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.7);
-	}
-
-	.contact {
-		background-color: white;
-		background-size: 100%;
-	background-repeat: no-repeat;
-	box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.7);
-	}
-
-	#dev {
-		margin-right: 10%;
+	#dev, #full, #prog {
+		margin-left: 5%;
+		margin-right: 5%;
 		padding: 1%;
 		border: 4px solid black;
 		cursor: pointer;
 	}
 
-	#full {
-		margin-right: 10%;
-		padding: 1%;
-		border: 4px solid black;
-		cursor: pointer;
-	}
-
-	#prog {
-		margin-right: 10%;
-		padding: 1%;
-		border: 4px solid black;
-		cursor: pointer;
-	}
-
-	#dev:hover {
-		color: rgba(169, 169, 169, 1);
-
-	}
-
-	#full:hover {
+	#dev:hover, #full:hover, #prog:hover {
 		color: rgba(169, 169, 169, 1);
 	}
-
-	#prog:hover {
-		color: rgba(169, 169, 169, 1);
-	}
-
-	/*header {
-		height: 15%;
-		width: 100%;
-		font-family: 'Fira Sans', sans-serif;
-		border-bottom: 1px black solid;
-	}*/
 
 	h2 {
 		text-align: center;
@@ -329,7 +281,7 @@
 	nav {
 		text-align: center;
 		margin-top: 30px;
-		margin-right: 6%;
+		
 	}
 
 	h1 {
@@ -338,7 +290,7 @@
 		margin-top: 7%;
 		padding-top: 10%;
 		padding-bottom: 10%;
-		font-size: 96px;
+		font-size: 128px;
 		text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 	}
 
@@ -348,14 +300,12 @@
 		text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 		font-size: 36px;
 		padding: 1%;
-		margin-left: 9%;
 		margin-top: 4%;
 
 
 	}
 
-	a {
-		margin-left: 10%;
+	a, a:visited {
 		font-size: 18px;
 		text-decoration: none;
 		color: rgba(0,0,0,1);
@@ -370,12 +320,7 @@
 		text-decoration: none;
 	}
 
-	.container {
-		width: 90%;
-		background-color: white;
-
-	}
-
+	
 	.pictures {
 			text-align: center;
 		}
@@ -502,20 +447,20 @@
 	}
 
 	.para-header {
-			margin-left: -1%;
-			font-size: 10px;
-		}
-	
+		margin-left: -1%;
+		font-size: 10px;
+	}
 
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 320px) {
 	#about, #port, #contact {
 		font-size: 10px;
 	}
 
 	#dev, #full, #prog {
-		margin-right: 1%;
+		margin-left: -2%;
+		margin-right: -2%;
 	}
 
 }
@@ -526,6 +471,8 @@
 
 <script>
 	
+
+
 	$("#about").click(function() {
 	stopAnimate();
     $('html,body').animate({
@@ -566,19 +513,19 @@ function animateDiv() {
 	function slideDiv() {
 
 		$(".para-header").slideUp(3000, function(){
-			$("#dev").text("CREATIVE");
-			$("#full").text("MOTIVATED")
-			$("#prog").text("COMMITTED")
+			$("#dev").text("//CREATIVE");
+			$("#full").text("//MOTIVATED")
+			$("#prog").text("//COMMITTED")
 			$(".para-header").slideDown(2000)
 			$(".para-header").slideUp(3000, function(){
-				$("#dev").text("PRODUCTIVE");
-				$("#full").text("PROACTIVE");
-				$("#prog").text("ACHIEVER");
+				$("#dev").text("//PRODUCTIVE");
+				$("#full").text("//PROACTIVE");
+				$("#prog").text("//ACHIEVER");
 				$(".para-header").slideDown(2000)
 				$(".para-header").slideUp(3000, function(){
-					$("#dev").text("DEVELOPER");
-					$("#full").text("FULL-STACK");
-					$("#prog").text("PROGRAMMER");
+					$("#dev").text("//DEVELOPER");
+					$("#full").text("//FULL-STACK");
+					$("#prog").text("//PROGRAMMER");
 					$(".para-header").slideDown(2000, function(){
 						fading = false;
 					})
@@ -676,9 +623,8 @@ function stopAnimate() {
 
 	});
 
-$('#prog').click(function (){
-	$('body').css("background-color", "#fff").fadeOut(1000)
-    $('body').animate({backgroundColor: '#FF0000'}, 1000);
+$('#prog').on("click", function (){
+	$(".title").animate({left: "200px"}, 1000)
 })
 	
 </script>
