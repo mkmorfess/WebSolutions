@@ -14,17 +14,15 @@
 	<body>
 		<div id="home-section">
 			<div class="container-fluid home">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<nav>
-								<a><inline id="about">.ABOUT</inline></a>
-								<a><inline id="port">.PORTFOLIO</inline></a>
-								<a><inline id="contact">.CONTACT</inline></a>
-							</nav>
-					</div>
-				</div>
-			</div>
+				
+					<div class="col-md-12">
+						<nav>
+							<a><inline id="about">.ABOUT</inline></a>
+							<a><inline id="port">.PORTFOLIO</inline></a>
+							<a><inline id="contact">.CONTACT</inline></a>
+						</nav>
+					</div>				
+				
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -48,7 +46,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-						<h2><inline>ABOUT MYSELF</inline></h2>
+						<h2><inline>{ABOUT}</inline></h2>
 					</div>
 				</div>
 			</div>
@@ -99,7 +97,7 @@
 		</div>
 
 	<div id="port-section">
-		<h2><inline>PORTFOLIO</inline></h2>
+		<h2><inline>{PORTFOLIO}</inline></h2>
 		<div class="container container-sec port">
 			<div class="row">
 				<div class="col-md-12 text-center">						
@@ -118,7 +116,7 @@
 
 	<div id="contact-section">
 		
-			<h2><inline>CONTACT ME</inline></h2>
+			<h2><inline>{CONTACT}</inline></h2>
 		
 	<div class="container container-sec contact">
 		<div class="row">
@@ -211,11 +209,13 @@
 	body {
 		background-size: cover;
 		background-attachment: fixed;
-		
+		background-repeat: no-repeat;
 		background-image: url("bridge1.jpeg");
 		/*background-color: rgba(0,0,0,0.1);*/
 		font-family: 'Fira Sans', sans-serif;
 	}
+
+	
 
 	.container-sec {
 		margin-top: 5%;
@@ -225,7 +225,7 @@
 	}
 
 	.home {
-		background-color: rgba(0,0,0,0.1);
+		
 		background-size: 100%;
 		border-bottom: 20px black solid;
 		padding-bottom: 25%;
@@ -242,12 +242,19 @@
 	}
 
 	#about, #contact, #port{
-		border: 2px solid black;
+		border: 3px solid rgba(0,0,0, 1);
 		padding: .5%;
 		margin-left: 3%;
 		margin-right: 3%;
+		background-color: rgba(0,0,0,0.7);
+		color: rgba(255,255,255,1);
+		text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+		border-radius: 8px;
 	}
-
+	#about:hover, #contact:hover, #port:hover{
+		color: rgba(255, 0, 0, 0.7);
+		border: 3px solid rgba(255, 0, 0, 0.7);
+	}
 	#about-section, #port-section, #contact-section {
 		margin-top: 10%;
 	}
@@ -255,20 +262,26 @@
 	
 
 	#dev, #full, #prog {
-		margin-left: 5%;
-		margin-right: 5%;
+		margin-left: 4%;
+		margin-right: 4%;
 		padding: 1%;
-		border: 4px solid black;
+		border: 4px solid rgba(0,0,0, 1);
 		cursor: pointer;
+		background-color: rgba(0,0,0,0.7);
+		border-radius: 10px;
+
 	}
 
 	#dev:hover, #full:hover, #prog:hover {
-		color: rgba(169, 169, 169, 1);
+		color: rgba(255, 0, 0, 0.7);
+		border: 4px solid rgba(255, 0, 0, 0.7);
+
 	}
 
 	h2 {
 		text-align: center;
-		font-size: 48px;
+		font-size: 64px;
+		color: rgba(0,0,0,1);
 	}
 
 	span {
@@ -296,11 +309,11 @@
 
 	.para-header {
 		text-align: center;
-		color: rgba(0,0,0,1.0);
-		text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
-		font-size: 36px;
+		color: rgba(255,255,255,1);
+		text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+		font-size: 32px;
 		padding: 1%;
-		margin-top: 4%;
+		margin-top: 5%;
 
 
 	}
@@ -316,7 +329,7 @@
 		text-decoration: none;
 	}
 	a:hover {
-		color: rgba(255,255,255, 0.5);
+		
 		text-decoration: none;
 	}
 
@@ -335,7 +348,7 @@
 
 		.centerpic {
 			border-radius: 96px;
-			border: 2px rgba(0,0,0,1) solid;
+			border: 3px rgba(0,0,0,1) solid;
 			box-shadow: 10px 10px 10px rgba(0,0,0,0.7);
 
 		}
@@ -471,7 +484,7 @@
 
 <script>
 	
-
+$(document).ready(function(){
 
 	$("#about").click(function() {
 	stopAnimate();
@@ -496,9 +509,8 @@
 
 
 
-    $(document).ready(function(){
-      $('.slider').bxSlider();
-    });
+$('.slider').bxSlider();
+   
 
 
 var fading = false;
@@ -623,10 +635,7 @@ function stopAnimate() {
 
 	});
 
-$('#prog').on("click", function (){
-	$(".title").animate({left: "200px"}, 1000)
-})
-	
+ });	
 </script>
 
 </body>
