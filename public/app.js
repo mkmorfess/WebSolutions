@@ -23,33 +23,63 @@ $(document).ready(function(){
         2000);
 });
 
+$("#socialmedia").click(function() {
+	stopAnimate();
+    $('html,body').animate({
+        scrollTop: $("#socialmedia-section").offset().top},
+        2000);
+});
 
 
-$(".slider").bxSlider();
 
-$("#contact-form").on("submit", function(){
-var clientInfo = [$("#fname").val().trim(), $("#lname").val().trim(), $("#email").val().trim(), $("#phone").val().trim(), $("#message").val().trim()]
-   
+$(function(){
+  $('.slider').bxSlider({
+    mode: 'fade',
+    captions: true,
+    slideWidth: 800,
+    slideMargin: 0,
+    adaptiveHeight: true
+  });
+});
+
+$("#contact-form").submit(function(e){
+e.preventDefault();
+
+var clientInfo = {
+	fname: $("#fname").val().trim(),
+	lname: $("#lname").val().trim(), 
+	email: $("#email").val().trim(), 
+	phone: $("#phone").val().trim(), 
+	message: $("#message").val().trim()
+}
+
 $.ajax("/", {
             type: "POST",
             data: clientInfo
           }).then(
             function() {
               console.log("Added new client");
-              
-              location.reload();
 
               $("#fname").val("")
               $("#lname").val("") 
               $("#email").val("")
-
               $("#phone").val("") 
               $("#message").val("")
+
+              $(".messages").css("visibility", "visible")
+
+              $(".messages").fadeOut(7000, function(){
+              	$(".messages").css("visibility", "hidden")
+              })
+
 
 
             }
           );
          })
+
+
+
 
 var fading = false;
 var timedFade;
