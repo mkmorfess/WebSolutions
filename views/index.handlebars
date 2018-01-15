@@ -164,15 +164,15 @@
 					</div>
 					
 					<div class="col-md-8">						
-						<div class="slider bx-wrapper">
-						  <div class="fill"><a href="https://mkmorfess.github.io/UpForWhatever" target="_blank"><img src="images/download.jpg" title="Up For Whatever: Restaurant web app that helps you decide where to eat. Languages: HTML/CSS/Javascript/Firebase"></a></div>
-						  <div class="fill"><a href="https://quiet-wildwood-75366.herokuapp.com/" target="_blank"><img src="images/EatBurger.png" title="Burger App that allows you to track the burgers you've eaten! Languages: Node.js/Javascript/MySQL/Bootstrap/Handlebars.js"></a></div>
-						  <div class="fill"><a href="https://glacial-retreat-13400.herokuapp.com/" target="_blank"><img src="images/FriendFinder.png" title="Friend Finder App that helps connect you to friends with similiar interests! Languages: Node.js/Javascript/HTML/Bootstrap"></a></div>
-						  <div class="fill"><img src="images/Bamazon.png" title="Command Line E-Commerce App that allows customers to buy items and managers to add new items and more! Languages: Node.js/MySQL"></div>
-						  <div class="fill"><a href="https://mkmorfess.github.io/TrainTime" target="_blank"><img src="images/TrainTime.png" title="Train Time is a website that takes in a new train on the schedule and times it with moment.js Languages: HTML/CSS/Javascript/Firebase/Moment.js"></a></div>
-						  <div class="fill"><img src="images/liri.jpg" title="Command Line App that takes in commands from the user and returns information such as tweets/spotify/movies - (Commands 'my-tweets', 'spotify-this-song', & 'movie-this') Languages: Node.js"></div>
-						  <div class="fill"><a href="https://mkmorfess.github.io/PsychicGame" target="_blank"><img src="images/PsychicGame.png" title="Psychic Game allows the user to try to guess a random letter the computer thinks of! Languages: HTML/Bootstrap/Javascript"></a></div>
-						  <div class="fill"><img src="images/hangman.jpeg" title="Command Line App that allows the user to play hangman! Languages: Node.js/NPM Packages"></div>
+						<div class="slider">
+						  <div class="fill"><a href="https://mkmorfess.github.io/UpForWhatever" target="_blank"><img class="port-image" src="images/download.jpg" title="Up For Whatever: Restaurant web app that helps you decide where to eat. Languages: HTML/CSS/Javascript/Firebase"></a></div>
+						  <div class="fill"><a href="https://quiet-wildwood-75366.herokuapp.com/" target="_blank"><img class="port-image" src="images/EatBurger1.jpg" title="Burger App that allows you to track the burgers you've eaten! Languages: Node.js/Javascript/MySQL/Bootstrap/Handlebars.js"></a></div>
+						  <div class="fill"><a href="https://glacial-retreat-13400.herokuapp.com/" target="_blank"><img class="port-image" src="images/FriendFinder.jpeg" title="Friend Finder App that helps connect you to friends with similiar interests! Languages: Node.js/Javascript/HTML/Bootstrap"></a></div>
+						  <div class="fill"><a href="https://github.com/mkmorfess/Bamazon" target="_blank"><img class="port-image" src="images/bamazon.jpg" title="Command Line E-Commerce App that allows customers to buy items and managers to add new items and more! Languages: Node.js/MySQL"></a></div>
+						  <div class="fill"><a href="https://mkmorfess.github.io/TrainTime" target="_blank"><img class="port-image" src="images/traintime.jpg" title="Train Time is a website that takes in a new train on the schedule and times it with moment.js Languages: HTML/CSS/Javascript/Firebase/Moment.js"></a></div>
+						  <div class="fill"><a href="https://github.com/mkmorfess/liri-node-app"><img class="port-image" src="images/liri.jpg" title="Command Line App that takes in commands from the user and returns information such as tweets/spotify/movies - (Commands 'my-tweets', 'spotify-this-song', & 'movie-this') Languages: Node.js"></a></div>
+						  <div class="fill"><a href="https://mkmorfess.github.io/PsychicGame" target="_blank"><img class="port-image" src="images/psychicgame.jpg" title="Psychic Game allows the user to try to guess a random letter the computer thinks of! Languages: HTML/Bootstrap/Javascript"></a></div>
+						  <div class="fill"><a href="https://github.com/mkmorfess/Hangman"><img class="port-image" src="images/hangman.jpeg" title="Command Line App that allows the user to play hangman! Languages: Node.js/NPM Packages"></a></div>
 						</div>
 					</div>
 
@@ -328,6 +328,11 @@
 
 
 <style>
+	.slider{
+	}
+	.social {
+		margin: 2%;
+	}
 
 	.resume {
 		color: red;
@@ -344,15 +349,47 @@
 
 
 	.fill {
-	    display: flex;
+
+		-webkit-display: flex; /* Safari and Chrome */
+	    -moz-display: flex; /* Firefox */
+	    -ms-display: flex; /* IE 9 */
+	    -o-display: flex; /* Opera */
+	     display: flex;
+	    -webkit-justify-content: center; /* Safari and Chrome */
+	    -moz-justify-content: center; /* Firefox */
+	    -ms-justify-content: center; /* IE 9 */
+	    -o-justify-content: center; /* Opera */
 	    justify-content: center;
+	    -webkit-align-items: center; /* Safari and Chrome */
+	    -moz-align-items: center; /* Firefox */
+	    -ms-align-items: center;/* IE 9 */
+	    -o-align-items: center; /* Opera */
 	    align-items: center;
-	    overflow: hidden
+
+	    -webkit-overflow: hidden; /* Safari and Chrome */
+	    -moz-overflow: hidden; /* Firefox */
+	    -ms-overflow: hidden;/* IE 9 */
+	    -o-overflow: hidden; /* Opera */
+
+	    overflow: hidden;
 	}
 	.fill img {
-	    flex-shrink: 0;
-	    min-width: 100%;
-	    min-height: 100%
+	    
+			-webkit-min-height: 100% /* Safari and Chrome */
+		    -moz-min-height: 100%; /* Firefox */
+		    -ms-min-height: 100%; /* IE 9 */
+		    -o-min-height: 100%; /* Opera */
+		     min-height: 100%;
+	    	-webkit-min-width: 100%; /* Safari and Chrome */
+		    -moz-min-width: 100%; /* Firefox */
+		    -ms-min-width: 100%; /* IE 9 */
+		    -o-min-width: 100%; /* Opera */
+		     min-width: 100%;
+	    	-webkit-flex-shrink: 0; /* Safari and Chrome */
+		    -moz-flex-shrink: 0; /* Firefox */
+		    -ms-flex-shrink: 0; /* IE 9 */
+		    -o-flex-shrink: 0; /* Opera */
+		     flex-shrink: 0;
 
 	}
 
@@ -634,6 +671,11 @@
 		
 		padding: 1%;
 		font-size: 14px;	
+	}
+
+	.port-image {
+		width: 800px;
+		height: 500px;
 	}
 }
 
