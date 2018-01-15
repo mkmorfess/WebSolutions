@@ -2,32 +2,54 @@
 $(document).ready(function(){
 
 
+	$("#home").click(function() {
+	stopAnimate();
+	$(".nav-background").css("visibility", "hidden")
+    $('html,body').animate({
+        scrollTop: $("#home-section").offset().top},
+        2000, function(){
+        	$(".nav-background").css("visibility", "visible")
+        });
+});
+
 	$("#about").click(function() {
 	stopAnimate();
+	$(".nav-background").css("visibility", "hidden")
     $('html,body').animate({
-        scrollTop: $("#about-section").offset().top},
-        2000);
+        scrollTop: $("#about-scroll").offset().top},
+        2000, function(){
+        	$(".nav-background").css("visibility", "visible")
+        });
 });
 
 	$("#port").click(function() {
 	stopAnimate();
+	$(".nav-background").css("visibility", "hidden")
     $('html,body').animate({
-        scrollTop: $("#port-section").offset().top},
-        2000);
+        scrollTop: $("#port-scroll").offset().top},
+        2000, function(){
+        	$(".nav-background").css("visibility", "visible")
+        });
 });
 
 	$("#contact").click(function() {
 	stopAnimate();
+	$(".nav-background").css("visibility", "hidden")
     $('html,body').animate({
-        scrollTop: $("#contact-section").offset().top},
-        2000);
+        scrollTop: $("#contact-scroll").offset().top},
+        2000, function(){
+        	$(".nav-background").css("visibility", "visible")
+        });
 });
 
 $("#socialmedia").click(function() {
 	stopAnimate();
+	$(".nav-background").css("visibility", "hidden")
     $('html,body').animate({
-        scrollTop: $("#socialmedia-section").offset().top},
-        2000);
+        scrollTop: $("#social-scroll").offset().top},
+        2000, function(){
+        	$(".nav-background").css("visibility", "visible")
+        });
 });
 
 
@@ -80,7 +102,7 @@ $.ajax("/", {
 
 
 
-
+var background = true;
 var fading = false;
 var timedFade;
 
@@ -137,6 +159,29 @@ function intervalDiv() {
 	
 	}
 }
+
+// function changeBackground() {
+
+// 	if (background === true) {
+// 		changeNow();
+// 		background = false;
+// 	}
+// 	else if (background === false) {
+// 		changeBack();
+// 	}
+
+// 	else {
+// 		console.log("Error")
+// 	}
+
+// 	function changeNow() {
+
+// 		$("#prog").click(function(){
+//     		$("#para-header").animate({right: '250px'});
+// 		}); 
+// 	}
+
+// }
 
 
 function stopAnimate() {
@@ -203,4 +248,31 @@ function stopAnimate() {
 
 	});
 
- });	
+
+// $("#prog").on("click", function(){	
+//  	if (fading === false) {
+
+// 			fading = true;
+// 			changeBackground();
+// 			console.log(fading);
+			
+// 		}
+
+// 		else if (fading === true) {
+
+// 			fading = false;
+// 			clearInterval(timedFade);
+// 			stopAnimate();
+			
+// 			console.log(fading);
+
+// 		}
+
+// 		else {
+// 			console.log("Error");
+// 		}	
+//  });
+
+
+ });
+

@@ -1,20 +1,25 @@
+	
+
 	<div id="home-section">
 			<div class="container-fluid home">
 				<div class="container-fluid nav-background">
 					<div class="col-md-12">
 						<nav>
-							<div class="col-sm-3">
+							
+							<a><inline id="home">.HOME</inline></a>
+							
+							
 							<a><inline id="about">.ABOUT</inline></a>
-							</div>
-							<div class="col-sm-3">
+							
+							
 							<a><inline id="port">.PORTFOLIO</inline></a>
-							</div>
-							<div class="col-sm-3">
+							
+							
 							<a><inline id="socialmedia">.SOCIAL MEDIA</inline></a>
-							</div>
-							<div class="col-sm-3">
+							
+							
 							<a><inline id="contact">.CONTACT</inline></a>
-							</div>
+							
 						</nav>
 					</div>
 				</div>
@@ -40,7 +45,8 @@
 			</div>
 		</div>
 
-		
+		<div id="about-scroll">
+		</div>
 
 
 		<div id="about-section">
@@ -183,7 +189,7 @@
 		</div>
 	</div>
 
-	<div class="container-fluid border" id="contact-scroll">
+	<div class="container-fluid border" id="social-scroll">
 	</div>
 
 	<div id="socialmedia-section">
@@ -360,6 +366,11 @@
 		border-radius: 5px;
 		top: 0;
 		padding-bottom: 2%;
+		position: fixed;
+	    width: 100%;
+	    z-index: 1000;
+	    margin-left: -1%;
+	    visibility: visible;
 
 	}
 
@@ -404,19 +415,21 @@
 		box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.7);
 	}
 
-	#about, #contact, #port, #socialmedia{
+	#about, #contact, #port, #socialmedia, #home{
 		
 		padding: 1%;
-		font-size: 26px;
+		font-size: 18px;
 		
 		color: rgba(255,255,255,1);
 		text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 		
 		
+		
 	}
-	#about:hover, #contact:hover, #port:hover{
+	#about:hover, #contact:hover, #port:hover, #socialmedia:hover, #home:hover{
 		color: rgba(169, 169, 169, 0.7);
 		border: 3px solid rgba(169, 169, 169, 0.7);
+		border-radius: 5px;
 	}
 	#about-section, #port-section, #contact-section, #socialmedia-section {
 		margin-top: 10%;
