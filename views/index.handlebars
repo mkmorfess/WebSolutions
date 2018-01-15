@@ -163,7 +163,7 @@
 					<div class="col-md-2 port-slider">
 					</div>
 					
-					<div class="col-md-8">						
+					<div class="col-md-8 slide-over">						
 						<div class="slider">
 						  <div class="fill"><a href="https://mkmorfess.github.io/UpForWhatever" target="_blank"><img class="port-image" src="images/download.jpg" title="Up For Whatever: Restaurant web app that helps you decide where to eat. Languages: HTML/CSS/Javascript/Firebase"></a></div>
 						  <div class="fill"><a href="https://quiet-wildwood-75366.herokuapp.com/" target="_blank"><img class="port-image" src="images/EatBurger1.jpg" title="Burger App that allows you to track the burgers you've eaten! Languages: Node.js/Javascript/MySQL/Bootstrap/Handlebars.js"></a></div>
@@ -328,8 +328,11 @@
 
 
 <style>
-	.slider{
+	
+	.slide-over {
+		margin-left: 3%;
 	}
+
 	.social {
 		margin: 2%;
 	}
@@ -373,7 +376,7 @@
 
 	    overflow: hidden;
 	}
-	.fill img {
+	.port-image {
 	    
 			-webkit-min-height: 100% /* Safari and Chrome */
 		    -moz-min-height: 100%; /* Firefox */
@@ -454,8 +457,9 @@
 
 	#about, #contact, #port, #socialmedia, #home{
 		
-		padding: 1%;
+		padding: 0.5%;
 		font-size: 18px;
+		margin: 1%;
 		
 		color: rgba(255,255,255,1);
 		text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
@@ -564,16 +568,27 @@
 
 		}
 
-		.image{
-			margin: 40px;
-		}
-
-		.image:hover {
+		.centerpic:hover {
+			content: url("images/ink4.jpeg");
 			-webkit-transform:scale(1.25); /* Safari and Chrome */
 		    -moz-transform:scale(1.25); /* Firefox */
 		    -ms-transform:scale(1.25); /* IE 9 */
 		    -o-transform:scale(1.25); /* Opera */
 		     transform:scale(1.25);
+		}
+
+		.image{
+			margin: 40px;
+		}
+
+		.image:hover {
+			 
+			-webkit-transform:scale(1.25); /* Safari and Chrome */
+		    -moz-transform:scale(1.25); /* Firefox */
+		    -ms-transform:scale(1.25); /* IE 9 */
+		    -o-transform:scale(1.25); /* Opera */
+		     transform:scale(1.25);
+		    
 		}
 
 		.row {
