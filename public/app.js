@@ -21,7 +21,7 @@ $(document).ready(function(){
         	$(".nav-background").css("visibility", "visible")
         });
 });
-
+//
 	$("#port").click(function() {
 	stopAnimate();
 	$(".nav-background").css("visibility", "hidden")
