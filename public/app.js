@@ -134,9 +134,7 @@ function animateDiv() {
 
 				});
 			})
-	})
-
-
+		})
 	}
 }
 
@@ -155,6 +153,27 @@ function intervalDiv() {
 	$("#full").fadeOut(3000).fadeIn(2000);
 	
 	$("#prog").fadeOut(4000).fadeIn(1000);
+	
+	
+	}
+}
+
+
+function reversalDiv() {
+
+	revFadeDiv();
+
+	timedFade = setInterval(revFadeDiv, 5000);
+	
+
+	function revFadeDiv() {
+
+
+	$("#dev").fadeOut(4000).fadeIn(1000);
+	
+	$("#full").fadeOut(3000).fadeIn(2000);
+	
+	$("#prog").fadeOut(2000).fadeIn(3000);
 	
 	
 	}
@@ -249,29 +268,29 @@ function stopAnimate() {
 	});
 
 
-// $("#prog").on("click", function(){	
-//  	if (fading === false) {
+$("#prog").on("click", function(){	
+ 	if (fading === false) {
 
-// 			fading = true;
-// 			changeBackground();
-// 			console.log(fading);
+			fading = true;
+			reversalDiv();
+			console.log(fading);
 			
-// 		}
+		}
 
-// 		else if (fading === true) {
+		else if (fading === true) {
 
-// 			fading = false;
-// 			clearInterval(timedFade);
-// 			stopAnimate();
+			fading = false;
+			clearInterval(timedFade);
+			stopAnimate();
 			
-// 			console.log(fading);
+			console.log(fading);
 
-// 		}
+		}
 
-// 		else {
-// 			console.log("Error");
-// 		}	
-//  });
+		else {
+			console.log("Error");
+		}	
+ });
 
 
  });
