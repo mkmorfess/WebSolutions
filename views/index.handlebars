@@ -65,7 +65,7 @@
 						
 						
 						<div class="pictures col-md-12">
-							<img class="centerpic image" src="images/mike.jpg" width="150" height="150" alt="">
+							<img class="centerpic image" src="images/mike.jpg" width="185" height="210" alt="">
 						</div>
 						<div class="pictures">
 							<img class="pic image" src="images/html.png" width="100" height="100" alt="">
@@ -388,6 +388,9 @@
 	}
 
 	.nav-background {
+		box-sizing: border-box;
+    	-moz-box-sizing: border-box;
+    	-webkit-box-sizing: border-box;
 		background-color: rgba(0,0,0,0.4);
 		border-radius: 5px;
 		top: 0;
@@ -452,7 +455,7 @@
 		padding: 0.5%;
 		font-size: 18px;
 		margin: 1%;
-		
+		padding-bottom: 2%;
 		color: rgba(255,255,255,1);
 		text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 		-webkit-transition: color 2s;
@@ -461,7 +464,7 @@
 		
 		
 	}
-	#about:hover, #contact:hover, #port:hover, #socialmedia:hover, #home:hover{
+	.nav-background nav #about:hover, #contact:hover, #port:hover, #socialmedia:hover, #home:hover{
 		color: rgba(169, 169, 169, 0.7);
 		/*border: 3px solid rgba(169, 169, 169, 0.7);
 		border-radius: 5px;*/
@@ -571,7 +574,7 @@
 		}
 
 		.centerpic:hover {
-			content: url("images/ink4.jpeg");
+			content: url("images/mike2.jpg");
 			-webkit-transform:scale(1.25); /* Safari and Chrome */
 		    -moz-transform:scale(1.25); /* Firefox */
 		    -ms-transform:scale(1.25); /* IE 9 */
@@ -608,9 +611,13 @@
 		.para-header {
 			font-size: 28px;
 		}
-		#about, #port, #contact {
-			font-size: 18px;
-		}
+
+		#about, #contact, #port, #socialmedia, #home{
+		font-size: 18px;
+		padding: 1%;
+		padding-bottom: 2.25%;
+		font-size: 13px;	
+	}
 
 		
 	}
@@ -625,7 +632,7 @@
 			font-size: 20px;
 		}
 
-		#about, #port, #contact {
+		#about, #contact, #port, #socialmedia, #home{
 			font-size: 16px;
 		}
 
@@ -684,6 +691,7 @@
 	#about, #contact, #port, #socialmedia, #home{
 		
 		padding: 1%;
+		padding-bottom: 2.25%;
 		font-size: 13px;	
 	}
 
@@ -712,7 +720,8 @@
 	#about, #contact, #port, #socialmedia, #home{
 		
 		padding: 0%;
-		font-size: 10px;	
+		font-size: 10px;
+		padding-bottom: 2.25%;	
 	}
 
 	.fill a img {
@@ -746,6 +755,11 @@
 
 	}
 
+	#about, #contact, #port, #socialmedia, #home{
+		padding-bottom: 2.3%;
+
+	}
+
 }
 
 @media only screen and (max-width: 410px) {
@@ -754,15 +768,11 @@
 		height: 400px;
 	}
 
-	#about, #port, #contact {
-		font-size: 10px;
-	}
-	
-
 	
 	#about, #contact, #port, #socialmedia, #home{
 		margin: -0.5%;
 		font-size: 8px;
+		padding-bottom: 2.6%;
 
 	}
 	
@@ -798,6 +808,10 @@
 	#dev, #full, #prog { 
 		font-size: 8px;
 
+	}
+
+	#about, #contact, #port, #socialmedia, #home{
+		padding-bottom: 2.6%;
 	}
 
 }
